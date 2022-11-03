@@ -1,0 +1,16 @@
+1 – Com suas palavras descreva o que é a DOM e qual sua relação com o HTML
+
+DOM ou Document object model é uma interface de programação destinada a documentos HTML e XML, onde por meio desta é possível fazer uma representação da página para que programas possam modificar sua estrutura, alterar o estilo e conteúdo. O DOM dessa forma facilita as linguagens de programação a se conectar a pagina por meio da representação de documento com nós e objetos. Sendo o DOM uma representação de páginas web orientada a objetos é possível modificá-la através de linguagens script como o JavaScript.
+
+
+2– O que é o canvas HTML?
+
+O canvas é um dos elementos HTML por meio do qual é possível desenhar utilizando a linguagem de Script, onde a mais comumente conhecida e utilizada é o JavaScript. Com isso é possível utilizá-la para fazer desenhos simples, gráficos ou até mesmo animações.
+
+3– Quais as linguagens e tecnologias comumente envolvidas no desenvolvimento de produtos baseados em  canvas html?
+
+As principais tecnologias utilizadas no desenvolvimento de produtos em Canvas é o próprio HTML que se trata de uma linguagem de marcação utilizada para a construção de páginas web e o JavaScript que é utilizado para implementar o canvas.
+
+4– Explique para que serve o código “document.getElementById()”
+
+O código em questão serve para retornar um elemento através do seu ID de identificação, onde o “Elemento” é uma referencia que aponta para um objeto, ou null (Espaço vazio) caso o ID buscado não esteja contido no documento, já o ID é uma String que serve como identificador único do elemento buscado.

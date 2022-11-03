@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questao 6</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="600"></canvas>
+
+    <script>
+        let canvas = document.querySelector("canvas");
+        let cont = canvas.getContext("2d");
+
+        function drawRect(x, y) {
+            cont.beginPath();
+            cont.fillStyle = "purple";
+            cont.arc(x, y, 10, 0, Math.PI * 2, true);
+            cont.fill();
+        }
+
+        let dirX;
+        let dirY;
+        let posX;
+        let posY;
+        let velocidade;
+        let intervalo;
+
+        function Start() {
+            dirX = dirY = posX = posY = 0;
+            velocidade = 30;
+            intervalo = setInterval(Update, 50);
+            document.addEventListener("keydown", KeyDown);
+            document.addEventListener("keyup", KeyUp);
+        }
+
+        function KeyDown() {
+            const key = event.key;
+            const keyDirection = {
+                ArrowRight: () => (dirX = 1),
+                ArrowLeft: () => (dirX = -1),
+                ArrowUp: () => (dirY = -1),
+                ArrowDown: () => (dirY = 1),
+            };
+            keyDirection[key]();
+        }
+
+        function KeyUp() {
+            const key = event.key;
+            const keyDirection = {
+                ArrowRight: () => (dirX = 0),
+                ArrowLeft: () => (dirX = 0),
+                ArrowUp: () => (dirY = 0),
+                ArrowDown: () => (dirY = 0),
+            };
+            keyDirection[key]();
+        }
+
+        function Update() {
+            cont.clearRect(0, 0, canvas.width, canvas.height);
+            posX += dirX * velocidade;
+            posY += dirY * velocidade;
+            drawRect(posX, posY);
+        }
+
+        window.addEventListener("load", Start);
+    </script>
+</body>
+
+</html>

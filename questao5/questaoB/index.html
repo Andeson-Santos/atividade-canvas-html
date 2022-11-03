@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 5 A</title>
+    <style>
+        h1 {
+            font-family: 'Helvetica Neue', sans-serif
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bucado de quadrado repetido </h1>
+    <canvas width="1000" height="1000"> </canvas>
+
+    <script>
+        let canvas = document.querySelector('canvas');
+        let cont = canvas.getContext('2d');
+
+        for (let i = 0; i < 6; i++) {
+            for (let j = 0; j < 3; j++) {
+
+                 //quadrado
+                cont.beginPath();
+                cont.strokeStyle = "#000080";
+                cont.strokeRect(50 * (i + i), 50 * (j + j), 80, 80);
+                //triangulo
+                cont.beginPath();
+                cont.moveTo(40 + (100 * i), 20 + (100 * j));
+                cont.lineTo(65 + (100 * i), 60+ (100 * j));
+                cont.lineTo(15 + (100 * i), 60 + (100 * j));
+                cont.lineTo(40 + (100 * i), 20 + (100 * j));
+                cont.strokeStyle = "#000080"
+                cont.stroke();
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
